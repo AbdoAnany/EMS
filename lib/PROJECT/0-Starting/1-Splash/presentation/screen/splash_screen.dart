@@ -34,7 +34,7 @@ class SplashScreen extends StatelessWidget {
           return Container(height: constraints.maxHeight,width: constraints.maxWidth,color: Colors.brown,child: Text(constraints.maxWidth.toString(),),);
         }
         else {
-          return Container(color: Colors.green,);
+          return Container(height: constraints.maxHeight,width: constraints.maxWidth,color: Colors.brown,child: Text(constraints.maxWidth.toString(),),);
         }
 
 
