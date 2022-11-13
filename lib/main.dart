@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 
-import 'PROJECT/0-Starting/1-Splash/presentation/screen/splash_screen.dart';
+import 'PROJECT/0-Starting/1-Splash/presentation/splash_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
