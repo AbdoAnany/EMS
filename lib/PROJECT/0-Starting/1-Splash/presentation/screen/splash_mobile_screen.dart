@@ -11,7 +11,14 @@ class SplashMobileScreen extends StatelessWidget {
       width: double.infinity,
       alignment: Alignment.center,
       color: Colors.deepPurple,
-      child: const Text('SplashMobileScreen',),
+      child:
+      Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/logo.png',width: 200,height: 200),
+            const Text(' Mobile ',),
+          ]),
     );
   }
 }

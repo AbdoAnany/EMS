@@ -16,7 +16,7 @@ class SplashTabletScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-        Image.asset('assets/images/logo.png',width: 200,height: 200),
+        Image.asset('assets/images/logo.png',width: 300,height: 300),
         const Text('Splash Tablet Screen',)
       ]),
     );

@@ -12,7 +12,14 @@ class SplashWebScreen extends StatelessWidget {
       width: double.infinity,
       alignment: Alignment.center,
       color: Colors.deepPurple,
-      child: const Text('Splash Web Screen',),
+      child:
+      Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/logo.png',width: 300,height: 300),
+            const Text('Splash Web Screen',),
+          ]),
     );
   }
 }
