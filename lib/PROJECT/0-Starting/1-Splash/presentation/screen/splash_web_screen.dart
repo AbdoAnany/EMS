@@ -1,6 +1,8 @@
 //@dart=2.9
 import 'package:flutter/material.dart';
 
+import '../../../../../CORE/utilities/images.dart';
+
 class SplashWebScreen extends StatelessWidget {
   const SplashWebScreen({Key key}) : super(key: key);
 
@@ -11,13 +13,13 @@ class SplashWebScreen extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       alignment: Alignment.center,
-      color: Colors.deepPurple,
+      color: Colors.white,
       child:
       Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assets/images/logo.png',width: 300,height: 300),
+            Image.asset(Img.logo,width: 300,height: 300),
             const Text('Splash Web Screen',),
           ]),
     );

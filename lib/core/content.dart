@@ -1,3 +1,4 @@
+//@dart=2.9
 import 'package:flutter/material.dart';
 import '/core/size_config.dart';
 
@@ -24,7 +25,7 @@ Color grayColor = const Color(0xffeae1e1);
 double reSize(fontSize) {
   return (fontSize / 400.0) * SizeConfig.screenWidth > fontSize
       ? fontSize
-      : (fontSize / 400.0) * SizeConfig.screenWidth!;
+      : (fontSize / 400.0) * SizeConfig.screenWidth;
 }
 
 TextStyle bodyTextStyle36(
@@ -140,20 +141,20 @@ TextStyle bodyTextStyle8(
 
 ThemeData theme() {
   return ThemeData(
-    scaffoldBackgroundColor: AppColors.appBarBackGround,
+    scaffoldBackgroundColor: AppColors.bg,
     primaryColor: Colors.red,
     primarySwatch: Colors.red,
     appBarTheme: const AppBarTheme(
-      color: AppColors.appBarBackGround,
-      iconTheme: IconThemeData(color: AppColors.main2),
+      color: AppColors.bg,
+      iconTheme: IconThemeData(color: AppColors.main),
     ),
     snackBarTheme: const SnackBarThemeData(
         elevation: 0,
-        backgroundColor: AppColors.main2,
-        actionTextColor: AppColors.appBarBackGround),
+        backgroundColor: AppColors.main,
+        actionTextColor: AppColors.bg),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.main,
-        foregroundColor: AppColors.appBarBackGround),
+        foregroundColor: AppColors.bg),
     fontFamily: 'SansArabic',
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -164,10 +165,10 @@ ThemeData darkTheme() {
   return ThemeData(
     scaffoldBackgroundColor: AppColors.black,
     backgroundColor: AppColors.black,
-    primaryColor: AppColors.main2,
+    primaryColor: AppColors.main,
     appBarTheme: const AppBarTheme(
       color: AppColors.black,
-      iconTheme: IconThemeData(color: AppColors.appBarBackGround),
+      iconTheme: IconThemeData(color: AppColors.bg),
     ),
     textTheme: const TextTheme(),
     fontFamily: 'SansArabic',
@@ -192,43 +193,17 @@ InputDecorationTheme inputDecorationTheme() {
 }
 
 class AppColors {
-  static const Color main2 = Color(0xFFE60021); // #e60021
-  static const Color main = Color(0xFFc40021);
-  static const Color shadow1 = Color(0x14000000);
-  static const Color shadow2 = Color(0x44000000);
-  static const Color shadow3 = Color(0xffd2dbe3);
+  static const Color main  = Color(0xff374f68);
 
-  static const Color blueGrey1 = Color(0xff374f68);
-
+  static const Color gray = Colors.grey;
+  static const Color gray1 = Color(0xFFC4C4C4);
+  static const Color gray2  = Color(0xFFABABAB);
+  static const Color gray3  = Color(0xFF737373);
+  static const Color blueGrey = Color(0xff374f68);
   static const Color black = Color(0xFF000000);
   static const Color white = Color(0xFFFFFFFF);
-
   static const Color transparent = Colors.transparent;
-
-  static const Color backGround = Color(0xfff0f3f6);
-  static const Color appBarBackGround = Colors.white;
-  static const Color green = Colors.green;
-  static const Color divider1 = Color(0xFFC9C9C9);
-  static const Color lightGrey1 = Color(0xFF636363);
-  static const Color getPointButtonColor = Color(0xFFFF8F00);
-
-  static const Color greyText1 = Color(0xFF878787);
-  static const Color productsButtonColor = Color(0xFF97B837);
-  static const kPrimaryBlueColor = Color(0xFF18a1ca);
-  static const kPrimaryRedColor = Color(0xFFE60021);
-  static const kPrimaryAmberColor = Color(0xFFFF8F00);
-
-  static const kPrimary2RedColor = Color(0xFFc40021);
-  static List<Color> glcColors = <Color>[
-    const Color(0xFF97B837),
-    const Color(0xFF18a1ca),
-    const Color(0xFFFF8F00),
-    const Color(0xFF636363),
-    const Color(0xFFc40021),
-  ];
-  static const Color profileImageSelectColor = Color(0xFFB1B1B1);
-  static const Color borderSideColor1 = Color(0xFF636363);
-  static const Color profileFormFieldsColor = Color(0xFF666666);
+  static const Color bg = Colors.white;
   static List<Color> normalColors = <Color>[
     const Color(0xFFa8062c),
     const Color(0xFFdf0023),
@@ -236,28 +211,25 @@ class AppColors {
     const Color(0xFFb40021),
   ];
   static List<Color> silverColors = <Color>[
-    const Color(0xFFC6C6C6), //#D5D5D5
-    const Color(0xFFD5D5D5), //#C6C6C6
-    const Color(0xFFD5D5D5), //#A4A4A4
-    const Color(0xFFA4A4A4),
+    const Color(0xCBA4A4A4),
+    const Color(0xFFC6C6C6),
+    const Color(0xFFD5D5D5),
+
+    const Color(0xFFFAFAFA),
+    const Color(0xFFD5D5D5),
+    const Color(0xFFC6C6C6),
+    const Color(0xCBA4A4A4),
+
   ];
   static List<Color> goldColors = <Color>[
+
     const Color(0xFFD3BF8F), // #D3BF8F
     const Color(0xFFD3BF8F), // #C7AE7B
     const Color(0xFFD3BF8F), // #C1A46E
     const Color(0xFFC1A46E),
+    const Color(0xFFFFFFFF), //#A4A4A4
   ];
 
-  static const Color normalArt = Color(0xFFE60021);
-  static const Color silverArt = Color(0xFFA4A4A4);
-  static const Color goldArt = Color(0xFFC1A46E);
-  static const boxShadow1 = BoxShadow(
-      color: greyText1, blurRadius: 8, offset: Offset(0, 8), spreadRadius: 1);
-  static const boxShadow2 = BoxShadow(
-      color: AppColors.shadow3,
-      blurRadius: 4,
-      offset: Offset(0, 4),
-      spreadRadius: 1);
 }
 
 class HexColor extends Color {

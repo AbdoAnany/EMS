@@ -252,7 +252,7 @@ class CustomSnackBar extends StatefulWidget {
     this.iconRotationAngle = 32,
     this.iconPositionTop = -10,
     this.iconPositionLeft = -8,
-    this.backgroundColor = AppColors.kPrimaryAmberColor,
+    this.backgroundColor = AppColors.main,
     this.boxShadow = kDefaultBoxShadow,
     this.borderRadius = kDefaultBorderRadius,
     this.textScaleFactor = 1.0,
