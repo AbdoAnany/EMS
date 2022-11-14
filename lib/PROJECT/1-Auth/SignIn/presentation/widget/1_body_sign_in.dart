@@ -24,7 +24,7 @@ class BodySignIn extends StatelessWidget {
           FadeInDown(
             delay: const Duration(milliseconds: 500),
             child: ListTile(
-              title: Text('Login', style: textStyleHeader),
+              title: Text('Sign In', style: textStyleHeader),
               subtitle: Text('Enter your email and password ',
                   style: textStyleSubtitle),
             ),
@@ -41,8 +41,13 @@ class BodySignIn extends StatelessWidget {
             delay: const Duration(milliseconds: 700),
             child: CustomTextFormField(model: MyTextFormField.password,),
           ),
+          FadeInDown(
+            delay: const Duration(milliseconds: 800),
+            child:   Align(
+                alignment: Alignment.centerRight,
+                child:  Text('Forget Password ?',style: textStyleUnderLine,)),
+          ),
 
-          //    const Text('Forget Password ?')
           const SizedBox(height: 100,),
           FadeInDown(
             delay: const Duration(milliseconds: 1000),
@@ -53,14 +58,14 @@ class BodySignIn extends StatelessWidget {
           ),
 
           const SizedBox(height: 10,),
-          FadeInDown(
-            delay: const Duration(milliseconds: 1000),
-            child: MainButton(
-              title: 'Sign Up',
-              onPressed: () => AuthCubit.get(context).onSignIn(),
-              isWhite: true,
-            ),
-          ),
+          // FadeInDown(
+          //   delay: const Duration(milliseconds: 1000),
+          //   child: MainButton(
+          //     title: 'Sign Up',
+          //     onPressed: () => AuthCubit.get(context).onSignIn(),
+          //     isWhite: true,
+          //   ),
+          // ),
         ],
       ),
     );

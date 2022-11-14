@@ -193,7 +193,8 @@ InputDecorationTheme inputDecorationTheme() {
 }
 
 class AppColors {
-  static const Color main  = Color(0xff374f68);
+  static const Color main  = Color(0xff8c1e64);
+  static const Color main1  = Color(0xffb22166);
 
   static const Color gray = Colors.grey;
   static const Color gray1 = Color(0xFFC4C4C4);

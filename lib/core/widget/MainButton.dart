@@ -20,11 +20,13 @@ class MainButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: isWhite?AppColors.white:AppColors.main,
         border:isWhite?  Border.all(color: AppColors.main, width:  1 ):
-        Border.all(color: AppColors.white, width:  1 )),
+        Border.all(color: AppColors.main, width:  0 ),
+      boxShadow: const [BoxShadow(color: AppColors.gray1,blurRadius: 16,offset: Offset(0, 16))]
+      ),
 
 
       child: MaterialButton(
-        elevation: 60,
+
         minWidth: SizeConfig.screenWidth,
         height: 50,
         onPressed: onPressed,

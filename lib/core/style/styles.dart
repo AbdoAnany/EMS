@@ -14,7 +14,9 @@ TextStyle textStyleLabel = const TextStyle(
     color: AppColors.main, fontWeight: FontWeight.bold, fontSize: 16);
 
 TextStyle textStyleSubtitle = const TextStyle(
-    color: AppColors.gray, fontWeight: FontWeight.normal, fontSize: 14);
+    color: AppColors.blueGrey, fontWeight: FontWeight.normal, fontSize: 14);
+TextStyle textStyleUnderLine = const TextStyle(
+    color: AppColors.blueGrey, fontWeight: FontWeight.normal, fontSize: 14,decoration: TextDecoration.underline);
 
 OutlineInputBorder outlineInputBorder = OutlineInputBorder(
   borderRadius: BorderRadius.circular(12),

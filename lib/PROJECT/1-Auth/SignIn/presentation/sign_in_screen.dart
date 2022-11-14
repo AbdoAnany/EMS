@@ -5,8 +5,8 @@ import 'package:ems/PROJECT/1-Auth/SignIn/presentation/widget/0_header_sign_in.d
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/widget/1_body_sign_in.dart';
 import 'package:ems/core/content.dart';
 import 'package:ems/core/size_config.dart';
+import 'package:ems/core/style/styles.dart';
 import 'package:flutter/material.dart';
-
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key key}) : super(key: key);
@@ -32,10 +32,23 @@ class SignInScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               borderRadius: const BorderRadius.all(Radius.circular(20)),
               width: SizeConfig.screenWidth,
-              child: Column(
-                  children: const [
-                    HeaderSignIn(),
-                    BodySignIn(),
+              child: Column(children: [
+                const HeaderSignIn(),
+                const BodySignIn(),
+                Text(
+                  'Or SignIn ',
+                  style: textStyleHeaderMain,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Image.asset('assets/images/facebook.png'),
+                    SizedBox(width: 40,),
+                    Image.asset('assets/images/google.png'),
+                  ],
+                )
               ]),
             ),
           )),
