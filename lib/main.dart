@@ -1,8 +1,14 @@
 //@dart=2.9
+import 'package:ems/PROJECT/1-Auth/SignIn/presentation/controller/AuthCubit.dart';
+import 'package:ems/PROJECT/1-Auth/SignIn/presentation/sign_in_screen.dart';
+import 'package:ems/core/content.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 
+import 'core/const/const.dart';
 import 'PROJECT/0-Starting/1-Splash/presentation/splash_screen.dart';
 
 
@@ -16,8 +22,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiBlocProvider(
+        providers: [
+        BlocProvider(
+        create: (context) => AuthCubit()),
+    ],
+    child: MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: Global.appName,
       builder: (context, child) => ResponsiveWrapper.builder(
           BouncingScrollWrapper.builder(context, child),
           maxWidth: 2460,
@@ -30,16 +42,17 @@ class MyApp extends StatelessWidget {
             const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
             const ResponsiveBreakpoint.resize(1400, name: DESKTOP),
             const ResponsiveBreakpoint.resize(1600, name: DESKTOP),
-            const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
+            const ResponsiveBreakpoint.resize(2460, name: "4K"),
 
           ],
-          background: Container(color: const Color(0xFFF5F5F5))),
+        ),
       theme: ThemeData(
 
-        primarySwatch: Colors.blue,
+        primaryColor:AppColors.main,
+       // textTheme: GoogleFonts.ibmPlexSansDevanagariTextTheme()
       ),
-      home: const SplashScreen(),
-    );
+      home:  const SplashScreen(),
+    ));
   }
 }
 
