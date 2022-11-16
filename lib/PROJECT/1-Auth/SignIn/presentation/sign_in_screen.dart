@@ -3,6 +3,7 @@ import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/controller/AuthCubit.dart';
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/widget/0_header_sign_in.dart';
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/widget/1_body_sign_in.dart';
+import 'package:ems/PROJECT/1-Auth/SignIn/presentation/widget/3_BlurBoll.dart';
 import 'package:ems/core/content.dart';
 import 'package:ems/core/size_config.dart';
 import 'package:ems/core/style/styles.dart';
@@ -19,104 +20,48 @@ class SignInScreen extends StatelessWidget {
       child: Scaffold(
           key: AuthCubit.get(context).scaffoldSignInKey,
           body: Stack(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.center,
             children: [
               Column(
-                children: [Row(
-                  children: [
-
-                    Container(
-                      width: SizeConfig.screenWidth*.5,height: SizeConfig.screenHeight*.5,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          //  color: AppColors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                color: AppColors.main1.withOpacity(1),
-                                blurRadius: 100,
-                                spreadRadius: 5)
-                          ]),
-                      padding: const EdgeInsets.all(20.0),
-                    ),
-                    Container(
-                      width: SizeConfig.screenWidth*.5,height: SizeConfig.screenHeight*.5,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          //  color: AppColors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                color: AppColors.main2.withOpacity(1),
-                                blurRadius: 100,
-                                spreadRadius: 5)
-                          ]),
-                      padding: const EdgeInsets.all(20.0),
-                    ),
-                  ],
-                ),
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      BlurBall(
+                        color: AppColors.main1,
+                      ),
+                      BlurBall(
+                        color: AppColors.main2,
+                      ),
+                    ],
+                  ),
                   Row(
                     children: [
-
-                      Container(
-                        width: SizeConfig.screenWidth*.5,height: SizeConfig.screenHeight*.5,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            //  color: AppColors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: AppColors.main3.withOpacity(1),
-                                  blurRadius: 100,
-                                  spreadRadius: 5)
-                            ]),
-                        padding: const EdgeInsets.all(20.0),
+                      BlurBall(
+                        color: AppColors.main3,
                       ),
-                      Container(
-                        width: SizeConfig.screenWidth*.5,height: SizeConfig.screenHeight*.5,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            //  color: AppColors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: AppColors.main4.withOpacity(1),
-                                  blurRadius: 100,
-                                  spreadRadius: 5)
-                            ]),
-                        padding: const EdgeInsets.all(20.0),
+                      BlurBall(
+                        color: AppColors.main4,
                       ),
                     ],
                   )
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(0.0),
                 child: BlurryContainer(
                   color: Colors.white.withOpacity(0.7),
                   blur: 10,
                   elevation: 10,
                   padding: const EdgeInsets.all(8),
-
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
                   width: SizeConfig.screenWidth,
-                  child: Column(children: [
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
                     const HeaderSignIn(),
                     const BodySignIn(),
-                    Text(
-                      'Or SignIn ',
-                      style: textStyleHeaderMain,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Image.asset('assets/images/facebook.png',
-                            width: 50, height: 50),
-                        SizedBox(
-                          width: 40,
-                        ),
-                        Image.asset('assets/images/google.png',
-                            width: 50, height: 50),
-                      ],
-                    )
+
                   ]),
                 ),
               ),
