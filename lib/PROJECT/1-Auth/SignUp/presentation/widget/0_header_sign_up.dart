@@ -6,8 +6,8 @@ import '../../../../../core/const/const.dart';
 import '../../../../../core/style/styles.dart';
 import '../../../../../core/utilities/images.dart';
 
-class HeaderSignIn extends StatelessWidget {
-  const HeaderSignIn({Key key}) : super(key: key);
+class HeaderSignUp extends StatelessWidget {
+  const HeaderSignUp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

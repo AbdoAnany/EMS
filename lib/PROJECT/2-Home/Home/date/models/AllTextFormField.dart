@@ -6,7 +6,7 @@ import 'MyTextFormFildModels.dart';
 class MyTextFormField {
   static MyTextFormFieldModels userName = MyTextFormFieldModels(
     label: AppString.userName,
-    hint: "enter your name",
+    hint: AppString.userNameHint,
     controller: TextEditingController(),
     icon: Icons.person,
     focusNode: FocusNode(),
@@ -14,7 +14,7 @@ class MyTextFormField {
   );
   static MyTextFormFieldModels email = MyTextFormFieldModels(
     label: AppString.email,
-    hint: "enter your email",
+    hint: AppString.emailHint,
     controller: TextEditingController(),
     icon: Icons.email,
     focusNode: FocusNode(),
@@ -22,14 +22,14 @@ class MyTextFormField {
   );
   static MyTextFormFieldModels password = MyTextFormFieldModels(
     label: AppString.password,
-    hint: "enter your password",
+    hint: AppString.passwordHint,
     controller: TextEditingController(),
     focusNode: FocusNode(),
     icon: Icons.visibility_outlined,
   );
   static MyTextFormFieldModels passwordConfirm = MyTextFormFieldModels(
     label: AppString.passwordConfirm,
-    hint: "enter your password",
+    hint: AppString.passwordConfirmHint,
     controller: TextEditingController(),
     focusNode: FocusNode(),
     icon: Icons.visibility_outlined,

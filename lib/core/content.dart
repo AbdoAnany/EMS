@@ -1,6 +1,6 @@
 //@dart=2.9
+import 'package:ems/core/size_config.dart';
 import 'package:flutter/material.dart';
-import '/core/size_config.dart';
 
 const kTestColor2 = Color(0xFAb12341);
 
@@ -193,7 +193,11 @@ InputDecorationTheme inputDecorationTheme() {
 }
 
 class AppColors {
-  static const Color main  = Color(0xff4dc591);
+  static const Color main  =  Color(0xff009688);
+
+ // static const Color main8  =      Colors.teal;
+
+//  static const Color main  = Color(0xff4dc591);
   static const Color main1  = Color(0xff9ba1ff);
   static const Color main2  = Color(0xff0391c4);
   static const Color main3  = Color(0xffff7648);

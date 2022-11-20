@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import '../../../../../core/style/styles.dart';
 import '../../../../../core/widget/MainButton.dart';
 
-class BodySignIn extends StatelessWidget {
-  const BodySignIn({Key key}) : super(key: key);
+class BodySignUp extends StatelessWidget {
+  const BodySignUp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +24,19 @@ class BodySignIn extends StatelessWidget {
           FadeInDown(
             delay: const Duration(milliseconds: 500),
             child: ListTile(
-              title: Text(AppString.signIn, style: textStyleHeader),
-              subtitle: Text(AppString.signInHint, style: textStyleSubtitle),
+              title: Text(AppString.signUp, style: textStyleHeader),
+              subtitle: Text(AppString.signUpHint, style: textStyleSubtitle),
             ),
           ),
 
           const SizedBox(
             height: 20,
+          ),
+          FadeInDown(
+            delay: const Duration(milliseconds: 700),
+            child: CustomTextFormField(
+              model: MyTextFormField.userName,
+            ),
           ),
           FadeInDown(
             delay: const Duration(milliseconds: 700),
@@ -42,6 +48,12 @@ class BodySignIn extends StatelessWidget {
             delay: const Duration(milliseconds: 700),
             child: CustomTextFormField(
               model: MyTextFormField.password,
+            ),
+          ),
+          FadeInDown(
+            delay: const Duration(milliseconds: 700),
+            child: CustomTextFormField(
+              model: MyTextFormField.passwordConfirm,
             ),
           ),
           FadeInDown(
@@ -60,7 +72,7 @@ class BodySignIn extends StatelessWidget {
           FadeInDown(
             delay: const Duration(milliseconds: 1000),
             child: MainButton(
-              title: AppString.signIn,
+              title: AppString.signUp,
               onPressed: () => AuthCubit.get(context).onSignIn(),
             ),
           ),

@@ -1,12 +1,12 @@
 //@dart=2.9
+import 'package:ems/PROJECT/1-Auth/SignIn/date/models/MyTextFormFildModels.dart';
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/controller/AuthCubit.dart';
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/controller/AuthState.dart';
+import 'package:ems/core/content.dart';
 import 'package:ems/core/size_config.dart';
+import 'package:ems/core/style/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/content.dart';
-import '../../../../../core/style/styles.dart';
-import '../../date/models/MyTextFormFildModels.dart';
 
 class CustomTextFormField extends StatelessWidget {
   MyTextFormFieldModels model;
