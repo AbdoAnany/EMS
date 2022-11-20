@@ -13,7 +13,7 @@ import 'package:responsive_framework/utils/scroll_behavior.dart';
 import 'core/const/const.dart';
 import 'PROJECT/0-Starting/1-Splash/presentation/splash_screen.dart';
 
-
+// https://zeracreative.com/products/school-management-system-software-karachi-pak/
 void main() {
 
   runApp(const MyApp());
