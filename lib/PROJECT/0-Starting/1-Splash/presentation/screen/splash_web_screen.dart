@@ -1,7 +1,7 @@
 //@dart=2.9
 import 'package:flutter/material.dart';
 
-import '../../../../../CORE/utilities/images.dart';
+import '../../../../../core/utilities/images.dart';
 
 class SplashWebScreen extends StatelessWidget {
   const SplashWebScreen({Key key}) : super(key: key);

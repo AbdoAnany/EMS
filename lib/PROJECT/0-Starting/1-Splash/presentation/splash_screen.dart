@@ -1,13 +1,10 @@
 //@dart=2.9
-import 'package:ems/PROJECT/0-Starting/1-Splash/presentation/screen/splash_mobile_screen.dart';
-import 'package:ems/PROJECT/0-Starting/1-Splash/presentation/screen/splash_tablet_screen.dart';
-import 'package:ems/PROJECT/0-Starting/1-Splash/presentation/screen/splash_web_screen.dart';
 import 'package:ems/core/const/const.dart';
 import 'package:ems/core/share/functions.dart';
 import 'package:ems/core/size_config.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../CORE/utilities/images.dart';
+import '../../../../core/const/const.dart';
+import '../../../../core/utilities/images.dart';
 import '../../../1-Auth/SignIn/presentation/sign_in_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -32,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     SizeConfig.init(context);
     return Scaffold(
         body: Container(
-      height: SizeConfig.screenWidth,
+      height: SizeConfig.screenHeight,
       width: double.infinity,
       alignment: Alignment.center,
       color: Colors.white,

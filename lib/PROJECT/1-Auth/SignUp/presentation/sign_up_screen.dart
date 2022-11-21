@@ -1,5 +1,5 @@
 //@dart=2.9
-import 'package:ems/CORE/utilities/images.dart';
+import 'package:ems/core/utilities/images.dart';
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/controller/AuthCubit.dart';
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/widget/0_header_sign_in.dart';
 import 'package:ems/PROJECT/1-Auth/SignUp/presentation/widget/1_body_sign_up.dart';

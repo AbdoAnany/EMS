@@ -2,6 +2,7 @@
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/controller/AuthCubit.dart';
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/sign_in_screen.dart';
 import 'package:ems/PROJECT/2-Home/Home/presentation/controller/HomeCubit.dart';
+import 'package:ems/PROJECT/2-Home/Home/presentation/home_screen.dart';
 import 'package:ems/core/content.dart';
 import 'package:ems/core/size_config.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
       //     minWidth: 450,
       //     defaultScale: true,
       //     breakpoints: [
-      //       const ResponsiveBreakpoint.autoScale(450, name: MOBILE),
+      //       const ResponsiveBreakpoint.autoScaleDown(450, name: MOBILE),
       //       const ResponsiveBreakpoint.autoScaleDown(800, name: TABLET),
       //       const ResponsiveBreakpoint.autoScaleDown(1100, name: TABLET),
       //       const ResponsiveBreakpoint.autoScaleDown(1200, name: DESKTOP),
@@ -57,7 +58,7 @@ class MyApp extends StatelessWidget {
         primaryColor:AppColors.main,
        // textTheme: GoogleFonts.ibmPlexSansDevanagariTextTheme()
       ),
-      home:  const SplashScreen(),
+      home:  const HomeScreen(),
     ));
   }
 }

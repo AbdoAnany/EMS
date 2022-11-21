@@ -1,7 +1,8 @@
 
-
-
+import 'package:ems/core/content.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/avd.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 navigatorTo({context, page}){
   Navigator.push(
@@ -48,4 +49,8 @@ navigatorAndReplaceTo({context, page}){
         pageBuilder: (context, animation, secondaryAnimation) =>
         page,
       ));
+}
+
+Widget iconSvg(assetName,{isDark=false}){
+  return  SvgPicture.asset(assetName,  color:isDark?AppColors.main: AppColors.white,);
 }
