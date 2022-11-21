@@ -9,7 +9,7 @@ class Img {
 
 class AppIcon {
   static String home ='assets/images/icons/home.svg';
-  static String share ='assets/images/icons/share.svg';
+  static String help ='assets/images/help.svg';
   static String calendar ='assets/images/icons/Calendar.svg';
   static String activity ='assets/images/icons/Activity.svg';
   static String activityBold ='assets/images/icons/Activity-bold.svg';
@@ -28,6 +28,8 @@ class AppIcon {
 
 
   static String profile ='assets/images/icons/Profile.svg';
+  static String profileBold ='assets/images/icons/Profile-bold.svg';
+
   static String settings ='assets/images/icons/settings.svg';
   static String logOut ='assets/images/icons/Log out.svg';
 
