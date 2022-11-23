@@ -2,7 +2,7 @@
 class HomeButtonBarEntities {
   final String name;
   Function onPress;
- bool selected;
+  bool selected;
 
-  HomeButtonBarEntities({this.name, this.onPress,this.selected});
+  HomeButtonBarEntities({this.name, this.onPress,this.selected=false});
 }

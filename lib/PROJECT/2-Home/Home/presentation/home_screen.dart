@@ -51,17 +51,9 @@ class HomeScreen extends StatelessWidget {
                       child: ListView(
                         shrinkWrap: true,
                         children: [
-                          HomeButtonBar(homeTabBar: HomeTabBar.home),
-                          HomeButtonBar(homeTabBar: HomeTabBar.profile) ,
-                          // HomeButtonBar(iconPath: AppIcon.profile,isDark: HomeCubit.selectedHomeTab==HomeTab.profile,
-                          //     onTap:()=>HomeCubit.get(context).changeHomeTab(HomeTab.profile)),
-                          //
-                          // HomeButtonBar(iconPath: AppIcon.activity,isDark: HomeCubit.selectedHomeTab==HomeTab.activity),
-                          // HomeButtonBar(iconPath: AppIcon.calendar,isDark: HomeCubit.selectedHomeTab==HomeTab.calendar),
-                          // HomeButtonBar(iconPath: AppIcon.heart,isDark: HomeCubit.selectedHomeTab==HomeTab.heart),
-                          // HomeButtonBar(iconPath: AppIcon.chat,isDark: HomeCubit.selectedHomeTab==HomeTab.chat),
-                          // HomeButtonBar(iconPath: AppIcon.category,isDark: HomeCubit.selectedHomeTab==HomeTab.category),
-                          //  HomeButtonBar(iconPath: AppIcon.logOut,isDark: HomeCubit.selectedHomeTab==HomeTab.logout),
+                          HomeButtonBar(homeTabBar:  HomeTabBar.homeTabBar[HomeTab.home]),
+                          HomeButtonBar(homeTabBar: HomeTabBar.homeTabBar[HomeTab.profile]) ,
+
                         ],
                       ),
                     ),

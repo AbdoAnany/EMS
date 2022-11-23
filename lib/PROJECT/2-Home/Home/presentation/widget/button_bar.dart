@@ -19,11 +19,11 @@ class HomeButtonBar extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    print('HomeButtonBar : ${homeTabBar.selected}');
 
     return BlocBuilder<HomeCubit,HomeState>(
     bloc: HomeCubit(),
         builder: (e,s){
-      print('HomeCubit');
         return       Container(
           width: 50,
           decoration: homeTabBar.selected? const BoxDecoration(
