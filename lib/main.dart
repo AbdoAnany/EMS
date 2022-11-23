@@ -31,8 +31,7 @@ class MyApp extends StatelessWidget {
         providers: [
         BlocProvider(
         create: (context) => AuthCubit()),
-          BlocProvider(
-              create: (context) => HomeCubit()),
+          BlocProvider(create: (context) => HomeCubit()),
     ],
     child: MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -52,6 +51,7 @@ class MyApp extends StatelessWidget {
       //       const ResponsiveBreakpoint.autoScaleDown(2460, name: "4K"),
       //
       //     ],
+
       //   ),
       theme: ThemeData(
 
