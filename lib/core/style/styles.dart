@@ -8,7 +8,9 @@ TextStyle textStyleHeaderLight = const TextStyle(
 TextStyle textStyleHeaderMain = const TextStyle(
     color: AppColors.main, fontWeight: FontWeight.normal, fontSize: 20);
 TextStyle textStyleHeaderMain16 = const TextStyle(
-    color: AppColors.main, fontWeight: FontWeight.normal, fontSize: 16);
+    color: AppColors.main, fontWeight: FontWeight.normal, fontSize: 16,overflow: TextOverflow.ellipsis, );
+TextStyle textStyleHeaderLight16 = const TextStyle(
+    color: AppColors.white, fontWeight: FontWeight.normal, fontSize: 16,overflow: TextOverflow.ellipsis);
 
 
 

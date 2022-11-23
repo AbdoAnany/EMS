@@ -193,7 +193,7 @@ InputDecorationTheme inputDecorationTheme() {
 }
 
 class AppColors {
-  static const Color main  =  blueGrey;
+  static const Color main  =  Color(0xff1a2633);
  // static const Color main  =  Color(0xff009688);
 
  // static const Color main8  =      Colors.teal;

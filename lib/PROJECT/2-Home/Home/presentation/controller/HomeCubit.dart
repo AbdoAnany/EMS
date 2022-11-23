@@ -12,17 +12,18 @@ class HomeCubit extends Cubit<HomeState> {
   static GlobalKey<ScaffoldState> scaffoldHomeKey = GlobalKey<ScaffoldState>();
 
   static HomeCubit get(context) => BlocProvider.of(context);
-   HomeTab selectedHomeTab=HomeTab.home;
-
-
+  static bool isHomeBarExpanded=false;
 
   changeHomeTab(HomeTab newTab){
-    selectedHomeTab=newTab;
-    HomeTabBar.homeTabBar[newTab]. selected=true;
-   // HomeTabBar.home
+    if( HomeTabBar.homeTabBar[newTab].selected){
+      doHomeBarExpanded();
+    }else
+    HomeTabBar.homeTabBar.forEach((key, value) =>  value.homeTab==newTab?value.selected=true: value.selected=false);
     emit(ChangeHomeTab());
-
-
+  }
+  doHomeBarExpanded(){
+    isHomeBarExpanded=!isHomeBarExpanded;
+    //emit(ChangeHomeTab());
   }
 
 

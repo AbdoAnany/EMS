@@ -8,23 +8,16 @@ class HomeTabBar {
   static Map<HomeTab,HomeButtonBarModel> homeTabBar={
 
     HomeTab.home:HomeButtonBarModel(
-      name: AppIcon.home,selected: false,
+      icon: AppIcon.home,selected: false,
+      homeTab: HomeTab.home,
       onPress: ()=>HomeCubit.get(HomeCubit.scaffoldHomeKey.currentContext).changeHomeTab(HomeTab.home) ,),
     HomeTab.profile:HomeButtonBarModel(
-      name: AppIcon.profile,selected: false,
+      icon: AppIcon.profile,selected: false,
+      homeTab: HomeTab.profile,
       onPress: ()=>HomeCubit.get(HomeCubit.scaffoldHomeKey.currentContext).changeHomeTab(HomeTab.profile) ,),
 
   };
 
-  // static HomeButtonBarModel home = HomeButtonBarModel(
-  //   name: AppIcon.home,selected: false,
-  //  onPress: ()=>HomeCubit.get(HomeCubit.scaffoldHomeKey.currentContext).changeHomeTab(HomeTab.home) ,
-  //
-  // );
-  // static HomeButtonBarModel profile = HomeButtonBarModel(
-  //   name: AppIcon.profile,selected:false,
-  //   onPress: ()=>HomeCubit.get(HomeCubit.scaffoldHomeKey.currentContext).changeHomeTab(HomeTab.profile) ,
-  //
-  // );
+
 }
 

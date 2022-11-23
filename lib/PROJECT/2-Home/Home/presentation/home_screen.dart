@@ -39,8 +39,8 @@ class HomeScreen extends StatelessWidget {
                 width: SizeConfig.screenWidth,
                 child: Row(
                   children: [
-                    Container(
-                      width: 50,height: double.infinity,
+                    AnimatedContainer(
+                      width:HomeCubit.isHomeBarExpanded?140: 50,height: double.infinity,
                       //   margin: const EdgeInsets.symmetric(vertical: 40),
 
                       decoration: const BoxDecoration(
@@ -48,6 +48,7 @@ class HomeScreen extends StatelessWidget {
                         //  borderRadius: BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(20)),
                         //  boxShadow: [BoxShadow(color: AppColors.gray1,offset: Offset( 4, 4),blurRadius: 8)]
                       ),
+                      duration: const Duration(milliseconds: 300),
                       child: ListView(
                         shrinkWrap: true,
                         children: [
