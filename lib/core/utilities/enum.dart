@@ -1,4 +1,4 @@
 
 
-enum HomeTab{home,chat,logout,share,profile,info,activity,calendar,heart,category}
+enum HomeTab{Home,Chat,Logout,Share,Profile,Info,Activity,Calendar,Heart,Category}
 

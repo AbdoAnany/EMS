@@ -43,9 +43,10 @@ class HomeButtonBar extends StatelessWidget {
               onPressed: homeTabBar.onPress,
               label: HomeCubit.isHomeBarExpanded
                   ? Text(
-                '   ' + homeTabBar.homeTab.name.toUpperCase(),
+                '   ' + homeTabBar.homeTab.name,
                       softWrap: true,
-                      style: homeTabBar.selected ? textStyleHeaderMain16 : textStyleHeaderLight16,)
+                      style: homeTabBar.selected ? textStyleHeaderMain20
+                          : textStyleHeaderLight20,)
                   : const SizedBox(), icon: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 8),
                     child: iconSvg(homeTabBar.icon, isDark: homeTabBar.selected),

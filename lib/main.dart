@@ -56,7 +56,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 
         primaryColor:AppColors.main,
-       // textTheme: GoogleFonts.ibmPlexSansDevanagariTextTheme()
+        //   textTheme: GoogleFonts.abhayaLibreTextTheme()
+          //    textTheme: GoogleFonts.fredokaTextTheme()
+      //  textTheme: GoogleFonts.solwayTextTheme()
+        textTheme: GoogleFonts.lemonadaTextTheme()
       ),
       home:  const HomeScreen(),
     ));

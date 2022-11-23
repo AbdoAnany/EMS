@@ -30,7 +30,7 @@ class MainButton extends StatelessWidget {
         minWidth: SizeConfig.screenWidth,
         height: 50,
         onPressed: onPressed,
-        child: Text(title, style:isWhite? textStyleHeaderMain:textStyleHeaderLight),
+        child: Text(title, style:isWhite? textStyleHeaderMain20:textStyleHeaderLight),
       ),
     );
   }

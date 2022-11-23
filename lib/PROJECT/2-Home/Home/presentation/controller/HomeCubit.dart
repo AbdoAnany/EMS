@@ -14,7 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
   static double barMax=200;
   static double barMin=60;
   static HomeCubit get(context) => BlocProvider.of(context);
-  static bool isHomeBarExpanded=false;
+  static bool isHomeBarExpanded=true;
 
   changeHomeTab(HomeTab newTab){
     if( HomeTabBar.homeTabBar[newTab].selected){
