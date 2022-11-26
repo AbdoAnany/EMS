@@ -155,7 +155,7 @@ ThemeData theme() {
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.main,
         foregroundColor: AppColors.bg),
-    fontFamily: 'SansArabic',
+   // fontFamily: 'SansArabic',
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );

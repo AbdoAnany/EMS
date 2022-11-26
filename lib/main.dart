@@ -56,13 +56,17 @@ class MyApp extends StatelessWidget {
 
       //   ),
       theme: ThemeData(
-
+fontFamily: 'Helvetica',
         primaryColor:AppColors.main,
+
         //   textTheme: GoogleFonts.abhayaLibreTextTheme()
           //    textTheme: GoogleFonts.fredokaTextTheme()
       //  textTheme: GoogleFonts.solwayTextTheme()
-        textTheme: GoogleFonts.cairoTextTheme()
+
+        //textTheme: GoogleFonts.cairoTextTheme()
+
       ),
+
       home:  const HomeScreen(),
     ));
   }

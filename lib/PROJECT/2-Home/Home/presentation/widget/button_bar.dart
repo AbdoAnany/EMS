@@ -29,28 +29,40 @@ class HomeButtonBar extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
           child: ElevatedButton.icon(
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(homeTabBar.selected ? AppColors.bg1 : AppColors.transparent),
+                  backgroundColor: MaterialStateProperty.all(homeTabBar.selected
+                      ? AppColors.bg1
+                      : AppColors.transparent),
                   elevation: MaterialStateProperty.all(0),
-
-                  alignment: Alignment.centerLeft,padding:  MaterialStateProperty.all(const  EdgeInsets.fromLTRB(0, 8, 0, 8),  ),
+                  alignment: Alignment.centerLeft,
+                  padding: MaterialStateProperty.all(
+                    const EdgeInsets.fromLTRB(0, 8, 0, 8),
+                  ),
                   shape: MaterialStateProperty.all(const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(8,),
-                      bottomLeft: Radius.circular(8,),
+                      topLeft: Radius.circular(
+                        8,
+                      ),
+                      bottomLeft: Radius.circular(
+                        8,
+                      ),
                     ),
-                  ) ),
+                  )),
                   animationDuration: const Duration(milliseconds: 300)),
               onPressed: homeTabBar.onPress,
               label: HomeCubit.isHomeBarExpanded
                   ? Text(
-                '   ' + homeTabBar.homeTab.name,
+                      '   ' + homeTabBar.homeTab.name,
                       softWrap: true,
-                      style: homeTabBar.selected ? textStyleHeaderMain16
-                          : textStyleHeaderLight16,)
-                  : const SizedBox(), icon: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 8),
-                    child: iconSvg(homeTabBar.icon, isDark: homeTabBar.selected),
-                  )),
+                      style: homeTabBar.selected
+                          ? textStyleHeaderMain16
+                          : textStyleHeaderLight16,
+                    )
+                  : const SizedBox(),
+              icon: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
+                child: iconSvg(homeTabBar.icon, isDark: homeTabBar.selected),
+              )),
         );
       },
     );
