@@ -38,7 +38,7 @@ class HomeView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
-                      'TICKET',
+                      'Ticket',
                       style: textStyleHeader,
                     ),
                     const Divider(

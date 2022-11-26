@@ -26,7 +26,7 @@ class AllUserScreen extends StatelessWidget {
             children: [
               Container(
                 margin: EdgeInsets.all(12),
-                // padding:EdgeInsets.all(12) ,
+                 padding:EdgeInsets.all(4) ,
                 height: (SizeConfig.screenHeight * .78)-60.0,
 
                 decoration: BoxDecoration(
@@ -36,13 +36,13 @@ class AllUserScreen extends StatelessWidget {
                 child: FutureBuilder<List<UserModel>>(
                   future: UserCubit.getAllUserData(),
                   builder: (context, as) => SfDataGrid(
-
                     source: UserCubit.allUserDataSource,
-                    allowSorting: true,allowColumnsResizing: true,
+                    allowSorting: true,
+                    allowColumnsResizing: true,
                     allowSwiping: true,
                     showSortNumbers: true,
-
-
+                    gridLinesVisibility: GridLinesVisibility.horizontal,
+                    headerGridLinesVisibility: GridLinesVisibility.none,
                     columnWidthMode: ColumnWidthMode.fill,
                     columns: UserCubit.listAllUserGridColumn.toList(),
                   ),
