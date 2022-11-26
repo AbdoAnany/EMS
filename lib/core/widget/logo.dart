@@ -21,9 +21,10 @@ class Logo extends StatelessWidget {
         label: HomeCubit.isHomeBarExpanded ? Text('  Admin  ', style: textStyleHeaderLight) : SizedBox(),
         icon: AnimatedContainer(
           height:  HomeCubit.isHomeBarExpanded?70:50,
-          width:  HomeCubit.isHomeBarExpanded?70:50,
-          duration: const Duration(milliseconds: 300),
-          child: Image.asset(Img.logo,),
+          width:  HomeCubit.isHomeBarExpanded?70:50,duration: Duration(milliseconds: 300),
+
+          child: Image.asset(
+            Img.logo,),
         ));
   }
 }

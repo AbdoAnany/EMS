@@ -199,10 +199,11 @@ class AppColors {
  // static const Color main8  =      Colors.teal;
 
 //  static const Color main  = Color(0xff4dc591);
-  static const Color main1  = Color(0xff9ba1ff);
+  static const Color main1  = Color(0xffffbf47);
   static const Color main2  = Color(0xff0391c4);
-  static const Color main3  = Color(0xffff7648);
+  static const Color main3  = Color(0xffff2525);
   static const Color main4  = Color(0xff4dc591);
+  static const Color bg1  = Color(0xfff8f8f8);
 
 
 
@@ -213,6 +214,8 @@ class AppColors {
 
   static const Color gray = Colors.grey;
   static const Color gray1 = Color(0xFFC4C4C4);
+  static const Color gray100 =   Color(0xFFD5D5D5);
+
   static const Color gray2  = Color(0xFFABABAB);
   static const Color gray3  = Color(0xFF737373);
   static const Color blueGrey = Color(0xff374f68);

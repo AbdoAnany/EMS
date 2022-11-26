@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                 body: WillPopScope(
                   onWillPop: () => Future.value(true),
                   child: Container(
-                    color: AppColors.white,
+                    color: AppColors.bg1,
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,

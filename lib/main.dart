@@ -3,6 +3,7 @@ import 'package:ems/PROJECT/1-Auth/SignIn/presentation/controller/AuthCubit.dart
 import 'package:ems/PROJECT/1-Auth/SignIn/presentation/sign_in_screen.dart';
 import 'package:ems/PROJECT/2-Home/Home/presentation/controller/HomeCubit.dart';
 import 'package:ems/PROJECT/2-Home/Home/presentation/home_screen.dart';
+import 'package:ems/PROJECT/2-Home/User/presentation/controller/UserCubit.dart';
 import 'package:ems/core/content.dart';
 import 'package:ems/core/size_config.dart';
 import 'package:flutter/material.dart';
@@ -29,9 +30,10 @@ class MyApp extends StatelessWidget {
 
     return MultiBlocProvider(
         providers: [
-        BlocProvider(
+          BlocProvider(
         create: (context) => AuthCubit()),
           BlocProvider(create: (context) => HomeCubit()),
+          BlocProvider(create: (context) => UserCubit()),
     ],
     child: MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -59,7 +61,7 @@ class MyApp extends StatelessWidget {
         //   textTheme: GoogleFonts.abhayaLibreTextTheme()
           //    textTheme: GoogleFonts.fredokaTextTheme()
       //  textTheme: GoogleFonts.solwayTextTheme()
-        textTheme: GoogleFonts.lemonadaTextTheme()
+        textTheme: GoogleFonts.cairoTextTheme()
       ),
       home:  const HomeScreen(),
     ));

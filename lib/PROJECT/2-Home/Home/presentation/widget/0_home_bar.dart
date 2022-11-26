@@ -21,8 +21,8 @@ class HomeBar extends StatelessWidget {
       //   margin: const EdgeInsets.symmetric(vertical: 40),
       decoration: const BoxDecoration(
           color: AppColors.main,
-          borderRadius: BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
-          boxShadow: [BoxShadow(color: AppColors.gray1,offset: Offset( 4, 4),blurRadius: 8)]
+       //   borderRadius: BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
+        //  boxShadow: [BoxShadow(color: AppColors.gray1,offset: Offset( 4, 4),blurRadius: 8)]
       ),
       duration: const Duration(milliseconds: 300),
       child:Column( children: [

@@ -8,7 +8,7 @@ class HomeTabBar {
   static Map<HomeTab,HomeButtonBarModel> homeTabBar={
 
     HomeTab.Home:HomeButtonBarModel(
-      icon: AppIcon.home,selected: false,
+      icon: AppIcon.home,selected: true,
       homeTab: HomeTab.Home,
       onPress: ()=>HomeCubit.get(HomeCubit.scaffoldHomeKey.currentContext).changeHomeTab(HomeTab.Home) ,),
     HomeTab.Profile:HomeButtonBarModel(

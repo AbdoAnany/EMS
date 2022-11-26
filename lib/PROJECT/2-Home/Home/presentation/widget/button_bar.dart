@@ -29,7 +29,7 @@ class HomeButtonBar extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
           child: ElevatedButton.icon(
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(homeTabBar.selected ? AppColors.white : AppColors.transparent),
+                  backgroundColor: MaterialStateProperty.all(homeTabBar.selected ? AppColors.bg1 : AppColors.transparent),
                   elevation: MaterialStateProperty.all(0),
 
                   alignment: Alignment.centerLeft,padding:  MaterialStateProperty.all(const  EdgeInsets.fromLTRB(0, 8, 0, 8),  ),
@@ -45,8 +45,8 @@ class HomeButtonBar extends StatelessWidget {
                   ? Text(
                 '   ' + homeTabBar.homeTab.name,
                       softWrap: true,
-                      style: homeTabBar.selected ? textStyleHeaderMain20
-                          : textStyleHeaderLight20,)
+                      style: homeTabBar.selected ? textStyleHeaderMain16
+                          : textStyleHeaderLight16,)
                   : const SizedBox(), icon: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 8),
                     child: iconSvg(homeTabBar.icon, isDark: homeTabBar.selected),
