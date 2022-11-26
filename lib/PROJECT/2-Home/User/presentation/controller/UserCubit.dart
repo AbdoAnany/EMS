@@ -125,7 +125,107 @@ class UserCubit extends Cubit<UserState> {
           priority: 'Low',
           createDate: DateTime.now().toString().split(' ').first,
           dueDate: DateTime.now().toString().split(' ').first,
-          action: "action")
+          action: "action"),
+      UserModel(
+          id: 10001,
+          requestBy: 'James',
+          subject: 'Project Lead',
+          status: 'new',
+          assignTo: 'A.Anany',
+          priority: 'High',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10002,
+          requestBy: 'Kathryn',
+          subject: 'Manager',
+          status: 'update',
+          assignTo: 'A.Anany',
+          priority: 'Medium',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10003,
+          requestBy: 'Lara',
+          subject: 'Developer',
+          status: 'padding',
+          assignTo: 'A.Anany',
+          priority: 'Low',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10004,
+          requestBy: 'Michael',
+          subject: 'Designer',
+          status: 'new',
+          assignTo: 'A.Anany',
+          priority: 'Low',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10005,
+          requestBy: 'Martin',
+          subject: 'Developer',
+          status: 'update',
+          assignTo: 'A.Anany',
+          priority: 'Medium',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10006,
+          requestBy: 'Newberry',
+          subject: 'Developer',
+          status: 'update',
+          assignTo: 'A.Anany',
+          priority: 'High',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10007,
+          requestBy: 'Balnc',
+          subject: 'Developer',
+          status: 'delete',
+          assignTo: 'A.Anany',
+          priority: 'Medium',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10008,
+          requestBy: 'Perry',
+          subject: 'Developer',
+          status: 'padding',
+          assignTo: 'A.Anany',
+          priority: 'Low',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10009,
+          requestBy: 'Gable',
+          subject: 'Developer',
+          status: 'new',
+          assignTo: 'A.Anany',
+          priority: 'High',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
+      UserModel(
+          id: 10010,
+          requestBy: 'Grimes',
+          subject: 'Developer',
+          status: 'delete',
+          assignTo: 'A.Anany',
+          priority: 'Low',
+          createDate: DateTime.now().toString().split(' ').first,
+          dueDate: DateTime.now().toString().split(' ').first,
+          action: "action"),
     ];
     allUserDataSource = UserDataSource(employeeData: allUser);
     //  emit(UserState1());
@@ -137,7 +237,7 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'ID',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'ID',
@@ -146,7 +246,8 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'Request By',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+          
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'Request By',
@@ -155,7 +256,7 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'Subject',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'Subject',
@@ -164,7 +265,7 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'Assign To',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'Assign To',
@@ -173,7 +274,7 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'Status',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'Status',
@@ -182,7 +283,7 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'Priority',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'Priority',
@@ -191,7 +292,7 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'Create Date',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'Create Date',
@@ -200,7 +301,7 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'Due Date',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'Due Date',
@@ -209,7 +310,7 @@ class UserCubit extends Cubit<UserState> {
         columnName: 'Action',
         allowSorting: true,
         label: Container(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(7.0),
             alignment: Alignment.center,
             child: const Text(
               'Action',
@@ -247,7 +348,7 @@ class UserDataSource extends DataGridSource {
         cells: row.getCells().map<Widget>((e) {
       if (e.columnName == 'Status') {
         return Container(
-          alignment: Alignment.center,
+          alignment: Alignment(-0.2,0),
           width: 40,height: 25,
           // padding: const EdgeInsets.all(8),
            margin: const EdgeInsets.symmetric(horizontal: 40,vertical: 12),
@@ -266,7 +367,7 @@ class UserDataSource extends DataGridSource {
       }
       else  if (e.columnName == 'Priority') {
         return Container(
-          alignment: Alignment.center,
+          alignment: Alignment(0,0),
           width: 40,height: 30,
            padding: const EdgeInsets.symmetric(vertical: 4),
           margin: const EdgeInsets.symmetric(horizontal: 50,vertical: 12),
@@ -287,18 +388,18 @@ class UserDataSource extends DataGridSource {
       }
       else  if (e.columnName == 'ID') {
         return Container(
-          alignment: Alignment.center,
+          alignment: const Alignment(-0.3,0),
           width: 40,height: 25,
           // padding: const EdgeInsets.all(8),
           margin: const EdgeInsets.symmetric(horizontal: 40,vertical: 12),
-
-          child: Text(e.value.toString(), style: TextStyle(fontSize: 14,   color: AppColors.main.withOpacity(1),fontWeight: FontWeight.bold )
+          child: Text('#'+e.value.toString(), style: TextStyle(fontSize: 14,   color: AppColors.main.withOpacity(1),fontWeight: FontWeight.bold )
           ),
         );
       }
       else {
         return Container(
-          alignment: Alignment.center,
+        //margin: EdgeInsets.all(8),
+          alignment: Alignment(-0.2,0),
        //   color: AppColors.white,
           padding: const EdgeInsets.all(8.0),
           child: Text(e.value.toString()),

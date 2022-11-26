@@ -19,35 +19,47 @@ class AllUserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return BlocConsumer<UserCubit, UserState>(
         builder: (e, s) {
-          return  Container(
-            margin: EdgeInsets.all(12),
-            // padding:EdgeInsets.all(12) ,
-            height: SizeConfig.screenHeight*.78,
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.all(12),
+                // padding:EdgeInsets.all(12) ,
+                height: (SizeConfig.screenHeight * .78)-60.0,
 
-            decoration: BoxDecoration(color: AppColors.white,borderRadius: BorderRadius. circular(12),
-                border: Border.all(color: AppColors.main.withOpacity(.3)
-                )
-            ),
-            child:
-            FutureBuilder<List<UserModel>>(
-              future:  UserCubit.getAllUserData() ,
+                decoration: BoxDecoration(
+                    color: AppColors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: AppColors.main.withOpacity(.3))),
+                child: FutureBuilder<List<UserModel>>(
+                  future: UserCubit.getAllUserData(),
+                  builder: (context, as) => SfDataGrid(
 
-              builder: (context,as)=>SfDataGrid(
+                    source: UserCubit.allUserDataSource,
+                    allowSorting: true,allowColumnsResizing: true,
+                    allowSwiping: true,
+                    showSortNumbers: true,
 
-                source:UserCubit .allUserDataSource,
-                columnWidthMode: ColumnWidthMode.fill,
-                columns:  UserCubit.listAllUserGridColumn.toList(),
+
+                    columnWidthMode: ColumnWidthMode.fill,
+                    columns: UserCubit.listAllUserGridColumn.toList(),
+                  ),
+                ),
               ),
-            ),
+              Container(
+
+                  height: 60.0,
+                  child: SfDataPager(
+                    delegate: DataPagerDelegate(),
+
+                    pageCount:  UserCubit.listAllUserGridColumn.length / 5,
+                    direction: Axis.horizontal,
+                  ))
+            ],
           );
         },
         listener: (e, s) {});
   }
 }
-
-
-
-
