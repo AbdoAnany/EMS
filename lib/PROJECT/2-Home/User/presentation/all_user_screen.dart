@@ -41,6 +41,8 @@ class AllUserScreen extends StatelessWidget {
                     allowColumnsResizing: true,
                     allowSwiping: true,
                     showSortNumbers: true,
+                    highlightRowOnHover: true,
+
                     gridLinesVisibility: GridLinesVisibility.horizontal,
                     headerGridLinesVisibility: GridLinesVisibility.none,
                     columnWidthMode: ColumnWidthMode.fill,
@@ -54,7 +56,7 @@ class AllUserScreen extends StatelessWidget {
                   child: SfDataPager(
                     delegate: DataPagerDelegate(),
 
-                    pageCount:  UserCubit.listAllUserGridColumn.length / 5,
+                    pageCount:  10,
                     direction: Axis.horizontal,
                   ))
             ],
